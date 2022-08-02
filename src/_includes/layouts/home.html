@@ -1,14 +1,19 @@
+{% set imgUrl = "/images/" + image.link %}
+
 {%- extends "layouts/base.html" -%}
 
 {%- block injectHead -%}
 {%- endblock -%}
 
 {%- block content -%}
-  {{ content | safe }}
-  <div id="pano" data-image={{ image.link }}></div>
-  <p class="credit">
-    Image: <a href="{{ image.credit.link }}">{{ image.credit.name }}</a>
-  </p>
+  <div id="pano" data-image={{ image.link }} aria-label="{{ image.alt }}">
+    <noscript>
+      <img src={{ imgUrl }} alt="{{ image.alt }}">
+    </noscript>
+  </div>
+  <div class="image-info cluster">
+    {{ content | safe }}
+  </div>
 {%- endblock -%}
 
 {%- block bodyScripts -%}

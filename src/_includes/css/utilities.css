@@ -17,3 +17,11 @@
   justify-content: var(--stack-vertical-alignment, flex-start);
   align-items: var(--stack-horizontal-alignment, flex-start);
 }
+
+:where(.cluster) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, 1em);
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+}

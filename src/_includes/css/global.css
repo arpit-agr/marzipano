@@ -6,7 +6,7 @@
 }
 
 :root {
-  --priamry: black;
+  --primary: black;
   --secondary: white;
 }
 
@@ -14,7 +14,8 @@ body {
   --stack-gap: 0;
   --stack-vertical-alignment: stretch;
   --stack-horizontal-alignment: stretch;
-  padding: var(--space-s-m);
+
+  color: var(--secondary);
   font-family: var(--font-plain);
   font-size: var(--step-0);
 }
@@ -31,29 +32,26 @@ main {
 }
 
 h1 {
-  position: absolute;
-  inset-block-end: 0;
-  z-index: 1;
-
-  max-inline-size: 13ch;
-  padding: var(--space-xs-s);
-
-  color: var(--secondary);
   font-size: var(--step-3);
   font-weight: 400;
   line-height: var(--line-height-0);
   letter-spacing: var(--letter-spacing-0);
 }
 
-#pano {
+p {
+  max-inline-size: 50ch;
+}
+
+a {
+  color: inherit;
+  pointer-events: auto;
+}
+
+.has-js #pano {
   flex-grow: 1;
 }
 
-#pano canvas {
-  border-radius: 1rem;
-}
-
-#pano:after {
+.has-js #pano:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -77,33 +75,48 @@ h1 {
   ); */
   background: linear-gradient(
     0deg,
-    hsl(9deg 86% 7% / 89%),
-    hsl(9deg 86% 7% / 76%) 11.36%,
-    hsl(9deg 86% 7% / 64%) 21.57%,
-    hsl(9deg 86% 7% / 53%) 30.81%,
-    hsl(9deg 86% 7% / 43%) 39.26%,
-    hsl(9deg 86% 7% / 34%) 47.09%,
-    hsl(9deg 86% 7% / 26%) 54.5%,
-    hsl(9deg 86% 7% / 19%) 61.66%,
-    hsl(9deg 86% 7% / 13%) 68.74%,
-    hsl(9deg 86% 7% / 8%) 75.94%,
-    hsl(9deg 86% 7% / 4%) 83.43%,
-    hsl(9deg 86% 7% / 1%) 91.39%,
-    hsl(9deg 86% 7% / 0%)
+    hsl(9deg 46% 7% / 89%),
+    hsl(9deg 46% 7% / 76%) 11.36%,
+    hsl(9deg 46% 7% / 64%) 21.57%,
+    hsl(9deg 46% 7% / 53%) 30.81%,
+    hsl(9deg 46% 7% / 43%) 39.26%,
+    hsl(9deg 46% 7% / 34%) 47.09%,
+    hsl(9deg 46% 7% / 26%) 54.5%,
+    hsl(9deg 46% 7% / 19%) 61.66%,
+    hsl(9deg 46% 7% / 13%) 68.74%,
+    hsl(9deg 46% 7% / 8%) 75.94%,
+    hsl(9deg 46% 7% / 4%) 83.43%,
+    hsl(9deg 46% 7% / 1%) 91.39%,
+    hsl(9deg 46% 7% / 0%)
   );
-  border-radius: 1rem;
   pointer-events: none;
 }
 
-.credit {
-  align-self: flex-end;
-  z-index: 1;
-  padding: var(--space-xs-s);
+.image-info {
+  --cluster-gap: var(--space-xs-s) var(--space-l-xl);
+  --cluster-horizontal-alignment: space-between;
+  --cluster-vertical-alignment: flex-end;
 
-  color: var(--secondary);
-  font-size: var(--step--1);
+  padding: var(--space-xs-s);
+  z-index: 1;
 }
 
-.credit a {
-  color: inherit;
+/* set a background color for legibility of text in case JS fails */
+.image-info {
+  background-color: var(--primary);
+}
+
+.has-js .image-info {
+  background-color: unset;
+  pointer-events: none;
+}
+
+.image-info h1 {
+  flex: 1;
+}
+
+.image-info h1 + p {
+  font-size: var(--step--1);
+  flex: 999;
+  text-align: right;
 }

@@ -1,0 +1,14 @@
+---
+title: "Angra"
+layout: "layouts/home.html"
+image:
+  link: "angra.jpeg"
+  alt: "Angra, Portugal is a UNESCO classified World Heritage Site."
+  credit:
+    name: "Marzipano"
+    link: "https://www.marzipano.net/demos/equirect/"
+---
+
+# {{ title | addNbsp | safe }}
+
+{{ image.alt | addNbsp | safe }} Image&nbsp;credit:&nbsp;<a href="{{ image.credit.link }}">{{ image.credit.name }}</a>
