@@ -2,11 +2,13 @@
 
 {%- extends "layouts/base.html" -%}
 
-{%- block injectHead -%}
+{%- block preload -%}
+  <link rel="preload" as="image" href={{ imgUrl }}>
+  <link rel="preload" href="/scripts/index.js" as="script" fetchpriority="high">
 {%- endblock -%}
 
 {%- block content -%}
-  <div id="pano" data-image={{ image.link }} aria-label="{{ image.alt }}">
+  <div id="pano" data-image={{ image.link }}>
     <noscript>
       <img src={{ imgUrl }} alt="{{ image.alt }}">
     </noscript>

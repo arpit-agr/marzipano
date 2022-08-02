@@ -2,7 +2,7 @@
 title: "Angra"
 layout: "layouts/home.html"
 image:
-  link: "angra.jpeg"
+  link: "angra.webp"
   alt: "Angra, Portugal is a UNESCO classified World Heritage Site."
   credit:
     name: "Marzipano"

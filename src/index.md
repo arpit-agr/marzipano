@@ -2,7 +2,7 @@
 title: "Sunset on Cerro Paranal"
 layout: "layouts/home.html"
 image:
-  link: "ESO_Paranal_360_Marcio_Cabral_Chile_08-CC.jpeg"
+  link: "chile.webp"
   alt: "A 360º panorama of Cerro Paranal and the VLT at sunset, just before the mountain is vacated and observation begins."
   credit:
     name: "ESO"

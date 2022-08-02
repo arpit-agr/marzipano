@@ -2,7 +2,7 @@
 title: "Peppermint Powerplant"
 layout: "layouts/home.html"
 image:
-  link: "peppermint_powerplant_2_4k.jpg"
+  link: "powerplant.webp"
   alt: "Abandoned industrial peppermint powerplant covered in graffiti."
   credit:
     name: "Andreas Mischok"

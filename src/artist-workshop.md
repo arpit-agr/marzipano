@@ -2,7 +2,7 @@
 title: "Artist Workshop"
 layout: "layouts/home.html"
 image:
-  link: "artist_workshop_4k.jpg"
+  link: "artist-workshop.webp"
   alt: "Paintings lit with natural midday light in a workshop."
   credit:
     name: "Oliksiy Yakovlyev"
