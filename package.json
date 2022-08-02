@@ -28,6 +28,8 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "clean-css": "^5.3.0",
     "dotenv": "^16.0.1",
-    "html-minifier": "^4.0.0"
+    "esbuild": "^0.14.51",
+    "html-minifier": "^4.0.0",
+    "marzipano": "^0.10.2"
   }
 }

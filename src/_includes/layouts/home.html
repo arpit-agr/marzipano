@@ -1,5 +1,16 @@
 {%- extends "layouts/base.html" -%}
 
+{%- block injectHead -%}
+{%- endblock -%}
+
 {%- block content -%}
   {{ content | safe }}
+  <div id="pano" data-image={{ image.link }}></div>
+  <p class="credit">
+    Image: <a href="{{ image.credit.link }}">{{ image.credit.name }}</a>
+  </p>
+{%- endblock -%}
+
+{%- block bodyScripts -%}
+  <script src="/scripts/index.js"></script>
 {%- endblock -%}
