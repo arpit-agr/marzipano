@@ -14,4 +14,4 @@ image:
 
 # {{ title | addNbsp | safe }}
 
-{{ image.alt | addNbsp | safe }} Image&nbsp;credit:&nbsp;<a href="{{ image.credit.link }}">{{ image.credit.name }}</a>
+{{ image.alt }} Image&nbsp;credit:&nbsp;<a href="{{ image.credit.link }}">{{ image.credit.name }}</a>
