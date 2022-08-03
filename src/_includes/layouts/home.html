@@ -3,12 +3,17 @@
 {%- extends "layouts/base.html" -%}
 
 {%- block preload -%}
-  <link rel="preload" as="image" href={{ imgUrl }}>
   <link rel="preload" href="/scripts/index.js" as="script" fetchpriority="high">
 {%- endblock -%}
 
 {%- block content -%}
-  <div id="pano" data-image={{ image.link }}>
+  <div 
+    id="pano" 
+    data-image={{ image.link }}
+    data-yaw={{ image.yaw }}
+    data-pitch={{ image.pitch }}
+    data-fov={{ image.fov }}
+  >
     <noscript>
       <img src={{ imgUrl }} alt="{{ image.alt }}">
     </noscript>

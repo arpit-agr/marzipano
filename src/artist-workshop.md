@@ -4,6 +4,9 @@ layout: "layouts/home.html"
 image:
   link: "artist-workshop.webp"
   alt: "Paintings lit with natural midday light in a workshop."
+  yaw: "180"
+  pitch: "0"
+  fov: "90"
   credit:
     name: "Oliksiy Yakovlyev"
     link: "https://polyhaven.com/a/artist_workshop"
